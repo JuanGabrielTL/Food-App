@@ -3,7 +3,8 @@ const palette={
     yellow: '#FFD980',
     blue: '#FAFCFD',
     black: '#262626',
-    gray: '#AAAAAA'
+    gray: '#AAAAAA',
+    green: '#47B635'
 }
 
 export {palette};

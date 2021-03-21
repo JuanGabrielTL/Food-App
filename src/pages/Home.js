@@ -7,6 +7,7 @@ import SelectBar from '../components/SelectBar'
 import foods from '../data/foods.json'
 import addressIcon from '../img/addressIcon.png'
 import NavBar from '../components/NavBar';
+import MenuBar from '../components/MenuBar';
 
 const useStyle=makeStyles({
     home:{
@@ -60,6 +61,7 @@ const Home = () => {
 
     return (
         <div className={classes.home}>
+            <MenuBar />
             <NavBar />
 
             <h1>Food</h1>

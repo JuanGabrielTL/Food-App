@@ -5,6 +5,8 @@ import {useParams} from 'react-router-dom'
 import foods from '../data/foods.json'
 import SelectSize from '../components/SelectSize';
 import NavBar from '../components/NavBar';
+import AlertModal from '../components/AlertModal';
+import shopIcon from '../img/shopIcon.png'
 
 const useStyle=makeStyles({
     order:{
@@ -38,6 +40,20 @@ const useStyle=makeStyles({
         display: 'flex',
         justifyContent: 'center',
         margin: '2.5rem 0'
+    },
+    overlay:{
+        position: 'fixed',
+        opacity: '0',
+        transition: '200ms ease-in-out',
+        top: '0',
+        left: '0',
+        right: '0',
+        bottom: '0',
+        backgroundColor: 'rgba(0, 0, 0, .5)',
+        pointerEvents: 'none'
+    },
+    btnShop:{
+        outline: 'none'
     }
 })
 
@@ -47,6 +63,14 @@ const Order = () => {
     const {id}=useParams()
 
     console.log(foods[id-1])
+
+    const handleAlert = ()=>{
+        const alert = document.getElementById('alert')
+        const overlay = document.getElementById('overlay')
+
+        alert.classList.add('modalActive')
+        overlay.classList.add('overlayActive')
+    }
 
     return (
         <div className={classes.order}>
@@ -67,10 +91,13 @@ const Order = () => {
                     <p>Price</p>
                     <h3>{foods[id-1].price}</h3>
                 </div>
-                <button>buy</button>
+                
+                <input onClick={handleAlert} type="image" src={shopIcon} className={classes.btnShop}/>
             </div>
 
+            <AlertModal />
 
+            <div id='overlay' className={classes.overlay}></div>
         </div>
     )
 }

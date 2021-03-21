@@ -94,3 +94,15 @@ a{
   }
 } */
 
+.modalActive{
+  transform: translate(-50%,-50%) scale(1)!important;
+}
+.overlayActive{
+  opacity: 1!important;
+  pointer-events: all!important;
+}
+
+.menuActive{
+  left: 0!important;
+}
+

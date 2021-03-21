@@ -30,9 +30,14 @@ const NavBar = () => {
 
     const classes=useStyle()
 
+    const handleMenu = ()=>{
+        const menu = document.getElementById('menu')
+        menu.classList.add('menuActive')
+    }
+
     return (
         <div className={classes.NavBar}>
-            <img src={menu} alt='menu' />
+            <img onClick={handleMenu} src={menu} alt='menu' />
 
             <div className={classes.InputContainer}>
                 <img src={search} alt='menu' />

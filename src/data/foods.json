@@ -1,0 +1,143 @@
+[
+    {
+        "id":"1",
+        "calories":"147 Calories",
+        "img":"https://i.imgur.com/1pbt2we.png",
+        "name":"Vegetables",
+        "description":"Tomatoes and olives",
+        "price":"$6,99"
+    },{
+        "id":"2",
+        "calories":"266 Calories",
+        "img":"https://i.imgur.com/brpd983.png",
+        "name":"Classic",
+        "description":"Pepperoni and cheese",
+        "price":"$7,99"
+    },
+    {
+        "id":"3",
+        "calories":"217 Calories",
+        "img":"https://i.imgur.com/RYmuRnE.png",
+        "name":"Carbonara",
+        "description":"Mushrooms",
+        "price":"$8,50"
+    },
+    {
+        "id":"4",
+        "calories":"196 Calories",
+        "img":"https://i.imgur.com/tESrLfS.png",
+        "name":"Cheesy",
+        "description":"Mixed with cheese",
+        "price":"$9,75"
+    },
+    {
+        "id":"5",
+        "calories":"205 Calories",
+        "img":"https://i.imgur.com/Pskeqy9.png",
+        "name":"Mixed",
+        "description":"Mixed vegetables",
+        "price":"$8,00"
+    },
+    {
+        "id":"6",
+        "calories":"324 Calories",
+        "img":"https://i.imgur.com/JLi1clE.png",
+        "name":"Complete",
+        "description":"Full ingredients",
+        "price":"$14,99"
+    },
+    {
+        "id":"7",
+        "calories":"295 Calories",
+        "img":"https://i.imgur.com/zQhquAc.png",
+        "name":"Quarter",
+        "description":"Cheese and pickle",
+        "price":"$5,00"
+    },{
+        "id":"8",
+        "calories":"607 Calories",
+        "img":"https://i.imgur.com/f8wc8n7.png",
+        "name":"Whopper",
+        "description":"Double meat",
+        "price":"$7,99"
+    },
+    {
+        "id":"9",
+        "calories":"183 Calories",
+        "img":"https://i.imgur.com/50r6OPH.png",
+        "name":"Veggie",
+        "description":"Vegan meat",
+        "price":"$6,75"
+    },
+    {
+        "id":"10",
+        "calories":"678  Calories",
+        "img":"https://i.imgur.com/1yloWDq.png",
+        "name":"Mega",
+        "description":"Chicken and meat",
+        "price":"$8,99"
+    },
+    {
+        "id":"11",
+        "calories":"203 Calories",
+        "img":"https://i.imgur.com/m1ZIZsh.png",
+        "name":"Little",
+        "description":"Kids burger",
+        "price":"$3,99"
+    },
+    {
+        "id":"12",
+        "calories":"652 Calories",
+        "img":"https://i.imgur.com/W2avQAE.png",
+        "name":"Stacker",
+        "description":"Big meat",
+        "price":"$7,50"
+    },
+    {
+        "id":"13",
+        "calories":"247 Calories",
+        "img":"https://i.imgur.com/2ZInkro.png",
+        "name":"Nuggets",
+        "description":"Natural chicken",
+        "price":"$4,90"
+    },{
+        "id":"14",
+        "calories":"284 Calories",
+        "img":"https://i.imgur.com/96k8qze.png",
+        "name":"French Fries",
+        "description":"Salted potatoes",
+        "price":"$3,99"
+    },
+    {
+        "id":"15",
+        "calories":"407 Calories",
+        "img":"https://i.imgur.com/hEkyCDU.png",
+        "name":"Onion Rings",
+        "description":"Breaded and fried",
+        "price":"$3,35"
+    },
+    {
+        "id":"16",
+        "calories":"140 Calories",
+        "img":"https://i.imgur.com/Du49USl.png",
+        "name":"Coca Cola",
+        "description":"Soft drink",
+        "price":"$2,00"
+    },
+    {
+        "id":"17",
+        "calories":"45 Calories",
+        "img":"https://i.imgur.com/FwiZmvm.png",
+        "name":"Orange Juice",
+        "description":"Refreshing juice",
+        "price":"$2,50"
+    },
+    {
+        "id":"18",
+        "calories":"207 Calories",
+        "img":"https://i.imgur.com/WoZ1W2K.png",
+        "name":"Ice Cream",
+        "description":"Delicious chocolate",
+        "price":"$4,00"
+    }
+]

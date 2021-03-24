@@ -11,6 +11,8 @@ import MenuBar from '../components/MenuBar';
 
 const useStyle=makeStyles({
     home:{
+        maxWidth: '1240px',
+        margin: '0 auto',
         padding: '2rem',
         backgroundColor: palette.white,
         '& h1':{

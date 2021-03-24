@@ -10,6 +10,8 @@ import shopIcon from '../img/shopIcon.png'
 
 const useStyle=makeStyles({
     order:{
+        maxWidth: '1240px',
+        margin: '0 auto',
         padding: '2rem',
         backgroundColor: palette.white,
         '& h2':{
@@ -92,7 +94,7 @@ const Order = () => {
                     <h3>{foods[id-1].price}</h3>
                 </div>
                 
-                <input onClick={handleAlert} type="image" src={shopIcon} className={classes.btnShop}/>
+                <input onClick={handleAlert} type="image" src={shopIcon} alt='shop' className={classes.btnShop}/>
             </div>
 
             <AlertModal />

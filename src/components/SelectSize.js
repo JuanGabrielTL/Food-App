@@ -6,7 +6,7 @@ const useStyle=makeStyles({
     SelectSize:{
         display: 'flex',
         justifyContent: 'space-around',
-        marginBottom: '2.5rem'
+        marginBottom: '3rem'
     }
 })
 

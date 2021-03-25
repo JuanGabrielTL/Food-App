@@ -1,18 +1,16 @@
 import React from 'react'
 import {makeStyles} from '@material-ui/styles';
 import {palette} from '../styles/palette'
+import {Link} from 'react-router-dom'
 import CardCart from '../components/CardCart'
+import NavBar from '../components/NavBar';
+import MenuBar from '../components/MenuBar';
 
 const useStyle=makeStyles({
     Cart:{
         maxWidth: '1240px',
         margin: '0 auto',
-        padding: '2rem',
-        maxWidth: '1280px',
-        '& hr':{
-            margin: '3rem 0',
-            color: palette.gray
-        }
+        padding: '2rem'
     },
     flexRow:{
         display: 'flex',
@@ -37,6 +35,10 @@ const useStyle=makeStyles({
         fontWeight: 500,
         marginTop: '2rem',
         color: palette.black
+    },
+    hr:{
+        margin: '3rem 0',
+        color: palette.gray
     }
 })
 
@@ -46,13 +48,16 @@ const Cart = () => {
 
     return (
         <div className={classes.Cart}>
+            <MenuBar />
+            <NavBar />
+
             <h1>Cart</h1>
 
             <CardCart />
             <CardCart />
             <CardCart />
 
-            <hr />
+            <hr className={classes.hr} />
 
             <div>
                 <div className={classes.flexRow}>
@@ -75,7 +80,9 @@ const Cart = () => {
                     <p>$65.50</p>
                 </div>
 
+                <Link to='/cart/payment'>
                 <button className={classes.btnCart}>Confirm Order</button>
+                </Link>
             </div>
         </div>
     )

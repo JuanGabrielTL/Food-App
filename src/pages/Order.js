@@ -4,9 +4,9 @@ import {palette} from '../styles/palette'
 import {useParams} from 'react-router-dom'
 import foods from '../data/foods.json'
 import SelectSize from '../components/SelectSize';
-import NavBar from '../components/NavBar';
 import AlertModal from '../components/AlertModal';
 import shopIcon from '../img/shopIcon.png'
+import NavOrder from '../components/NavOrder';
 
 const useStyle=makeStyles({
     order:{
@@ -76,7 +76,7 @@ const Order = () => {
 
     return (
         <div className={classes.order}>
-            <NavBar />
+            <NavOrder />
 
             <h2>{foods[id-1].name}</h2>
             <h4>{foods[id-1].description}</h4>

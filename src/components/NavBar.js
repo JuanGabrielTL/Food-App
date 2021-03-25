@@ -8,14 +8,17 @@ const useStyle=makeStyles({
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginBottom: '1.5rem'
+        marginBottom: '1.5rem',
+        '& img':{
+            cursor: 'pointer'
+        }
     },
     InputContainer:{
         display: 'flex',
         alignItems: 'center',
         border: '1px solid #AAAAAA',
         borderRadius: '13px',
-        padding: '0.3rem 0 0.3rem 1rem',
+        padding: '0.3rem 0 0.3rem 1rem'
     },
     InputSearch:{
         outline: 'none',

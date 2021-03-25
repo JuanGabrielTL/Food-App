@@ -4,7 +4,10 @@ const palette={
     blue: '#FAFCFD',
     black: '#262626',
     gray: '#AAAAAA',
-    green: '#47B635'
+    green: '#47B635',
+    snow: '#F9FAFB',
+    lapis: '#3195F0',
+    cyan: '#C1DFFB'
 }
 
 export {palette};

@@ -63,27 +63,27 @@ const MenuBar = () => {
             
             <hr />
 
-            <Link to='/' className={classes.li}>
+            <Link to='/home' onClick={handleClose} className={classes.li}>
                 <img src={homeIcon} alt='homeIcon' />
                 <span>Home</span>
             </Link>
 
-            <Link to='/cart' className={classes.li}>
+            <Link to='/cart' onClick={handleClose} className={classes.li}>
                 <img src={cartIcon} alt='cartIcon' />
                 <span>Shopping Cart</span>
             </Link>
 
-            <div className={classes.li}>
+            <Link to='/location' onClick={handleClose} className={classes.li}>
                 <img src={locationIcon} alt='locationIcon' />
                 <span>My Location</span>
-            </div>
+            </Link>
 
-            <div className={classes.li}>
+            <div onClick={handleClose} className={classes.li}>
                 <img src={receiptIcon} alt='receiptIcon' />
                 <span>Receipt</span>
             </div>
 
-            <div className={classes.li}>
+            <div onClick={handleClose} className={classes.li}>
                 <img src={darkIcon} alt='darkIcon' />
                 <span>Dark Mode</span>
             </div>

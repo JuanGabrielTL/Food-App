@@ -8,7 +8,7 @@ const useStyle=makeStyles({
         display: 'flex',
         justifyContent: 'space-between',
         margin: '1.5rem 0',
-        padding: '1rem 0',
+        padding: '1rem',
         '& button':{
             outline: 'none',
             border: 'none',

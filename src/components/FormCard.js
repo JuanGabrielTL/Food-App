@@ -30,13 +30,13 @@ const FormCard = () => {
 
     return (
         <form className={classes.FormCash}>
-            <input type='name' placeholder='Name' />
-            <input type='tel' placeholder='Card Number' />
+            <input type='name' placeholder='Name' required />
+            <input type='tel' placeholder='Card Number' required />
             <div className={classes.flexRow}>
-                <input type='month' placeholder='Date' />
-                <input type='tel' placeholder='CVV' />
+                <input type='month' placeholder='Date' required />
+                <input type='tel' placeholder='CVV' required />
             </div>
-            <input type='name' placeholder='Addres' />
+            <input type='name' placeholder='Addres' required />
         </form>
     )
 }

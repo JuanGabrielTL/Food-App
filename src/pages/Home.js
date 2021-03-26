@@ -27,7 +27,7 @@ const useStyle=makeStyles({
     containerCard:{
         display: 'flex',
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         flexWrap: 'wrap'
     },
     cardInformation:{

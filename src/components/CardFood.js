@@ -10,7 +10,7 @@ const useStyle=makeStyles({
         width: '16rem',
         cursor: 'pointer',
         padding: '1.5rem',
-        margin: '0.4rem 0',
+        margin: '0.3rem',
         '& p':{
             color: palette.gray,
             fontSize: '1.34rem',

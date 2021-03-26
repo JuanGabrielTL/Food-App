@@ -14,7 +14,7 @@ body{
   max-width: 100vw;
   margin: auto;
 }
-img,video{
+img,video,svg{
   max-width: 100%;
 }
 h1,h2,h3,h4,h5,h6,p,span{
@@ -109,5 +109,45 @@ a{
 .paymentOn{
   background-color: #C1DFFB!important;
   border: 1px solid #3195F0!important;
+}
+
+#moto{
+  animation: entry 1s linear;
+}
+@keyframes entry{
+  from{
+    transform: translateX(-800px);
+  }to{
+    transform: translateX(0);
+  }
+}
+
+#rightWheel{
+  animation: spin 1s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#leftWheel{
+  animation: spin 1s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes spin{
+  from{
+    transform: rotateZ(-360deg);
+  }to{
+    transform: rotateZ(0);
+  }
+}
+
+#back{
+  animation: back 1.5s linear infinite;
+}
+@keyframes back{
+  from{
+    transform: translateX(700px);
+  }to{
+    transform: translateX(-700px);
+  }
 }
 

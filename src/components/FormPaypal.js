@@ -23,9 +23,9 @@ const FormPaypal = () => {
 
     return (
         <form className={classes.FormPaypal}>
-            <input type='email' placeholder='Email' />
-            <input type='password' placeholder='Password' />
-            <input type='name' placeholder='Addres' />
+            <input type='email' placeholder='Email' required />
+            <input type='password' placeholder='Password' required />
+            <input type='name' placeholder='Addres' required />
         </form>
     )
 }

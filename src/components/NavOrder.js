@@ -31,7 +31,7 @@ const NavOrder = () => {
 
     return (
         <div className={classes.NavOrder}>
-            <Link to='/'>
+            <Link to='/home'>
             <img src={arrowIcon} alt='back' />
             </Link>
 

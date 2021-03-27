@@ -82,7 +82,6 @@ const Cart = () => {
         }else{
             return <EmptyCard />
         }
-        
     }
 
     const math=()=>{

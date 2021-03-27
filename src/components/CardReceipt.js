@@ -1,6 +1,7 @@
 import React from 'react'
 import {makeStyles} from '@material-ui/styles';
 import {palette} from '../styles/palette'
+import QRCode from "react-qr-code"; 
 
 const useStyle=makeStyles({
     CardReceipt:{
@@ -31,6 +32,11 @@ const useStyle=makeStyles({
     },
     mg:{
         margin: '1rem 0'
+    },
+    flexRow:{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center'
     }
 })
 
@@ -40,8 +46,14 @@ const CardReceipt = ({total}) => {
 
     return (
         <div className={classes.CardReceipt}>
-            <h4>You have to pay</h4>
-            <h2>{`${total} USD`}</h2>
+            <div className={classes.flexRow}>
+                <div>
+                    <h4>You have to pay</h4>
+                    <h2>{`${total} USD`}</h2>
+                </div>
+                <QRCode value={`Total: ${total} / Order Number: 1266201`} size={52} bgColor={palette.lapis} fgColor={palette.cyan} />
+            </div>
+
             <hr />
 
             <div>

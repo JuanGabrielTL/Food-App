@@ -64,14 +64,27 @@ const Order = () => {
     const classes=useStyle()
     const {id}=useParams()
 
-    console.log(foods[id-1])
-
     const handleAlert = ()=>{
         const alert = document.getElementById('alert')
         const overlay = document.getElementById('overlay')
 
         alert.classList.add('modalActive')
         overlay.classList.add('overlayActive')
+    }
+
+    const handleAddCart = ()=>{
+        handleAlert()
+
+        let items;
+
+        if(localStorage.getItem('cart')===null){
+            items=[]
+        }else{
+            items=JSON.parse(localStorage.getItem('cart'))
+        }
+
+        items.push(foods[id-1])
+        localStorage.setItem('cart', JSON.stringify(items))
     }
 
     return (
@@ -94,7 +107,7 @@ const Order = () => {
                     <h3>{foods[id-1].price}</h3>
                 </div>
                 
-                <input onClick={handleAlert} type="image" src={shopIcon} alt='shop' className={classes.btnShop}/>
+                <input onClick={handleAddCart} type="image" src={shopIcon} alt='shop' className={classes.btnShop}/>
             </div>
 
             <AlertModal />

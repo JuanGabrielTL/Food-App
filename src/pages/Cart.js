@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import CardCart from '../components/CardCart'
 import NavBar from '../components/NavBar';
 import MenuBar from '../components/MenuBar';
+import EmptyCard from '../components/EmptyCard';
 
 const useStyle=makeStyles({
     Cart:{
@@ -39,6 +40,11 @@ const useStyle=makeStyles({
     hr:{
         margin: '3rem 0',
         color: palette.gray
+    },
+    containerCart:{
+        height: '490px',
+        overflow: 'hidden',
+        overflowY: 'scroll',
     }
 })
 
@@ -46,17 +52,31 @@ const Cart = () => {
 
     const classes=useStyle()
 
+    const GetCart =()=>{
+        if(localStorage.getItem('cart')){
+            let cart = JSON.parse(localStorage.getItem('cart'))
+
+            return (
+                <div className={classes.containerCart}>
+                {cart.map((item)=>{
+                    return <CardCart key={item.id} img={item.img} name={item.name} price={item.price} />
+                })}
+                </div>
+            )
+        }else{
+            return <EmptyCard />
+        }
+    }
+
     return (
         <div className={classes.Cart}>
             <MenuBar />
             <NavBar />
 
             <h1>Cart</h1>
-
-            <CardCart />
-            <CardCart />
-            <CardCart />
-
+            
+            <GetCart />
+            
             <hr className={classes.hr} />
 
             <div>

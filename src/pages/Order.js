@@ -104,7 +104,7 @@ const Order = () => {
             <div className={classes.flexRow}>
                 <div>
                     <p>Price</p>
-                    <h3>{foods[id-1].price}</h3>
+                    <h3>{`$${foods[id-1].price}`}</h3>
                 </div>
                 
                 <input onClick={handleAddCart} type="image" src={shopIcon} alt='shop' className={classes.btnShop}/>

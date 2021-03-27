@@ -8,6 +8,7 @@ import cardIcon from '../img/cardIcon.png'
 import paypalIcon from '../img/paypalIcon.png'
 import CardReceipt from '../components/CardReceipt';
 import {Link} from 'react-router-dom'
+import {useLocation} from "react-router-dom";
 
 const useStyle=makeStyles({
     Payment:{
@@ -68,6 +69,8 @@ const Payment = () => {
 
     const classes=useStyle()
 
+    let data = useLocation();
+
     const [form, setForm] = useState( <FormCash /> )
 
     return (
@@ -89,7 +92,7 @@ const Payment = () => {
                 {form}
             </div>
 
-            <CardReceipt />
+            <CardReceipt total={data.state.total}/>
 
             <div className={classes.flexRow2}>
                 <Link to='/cart'>

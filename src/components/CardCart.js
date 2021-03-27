@@ -31,7 +31,7 @@ const CardCart = ({img,name,price}) => {
             </div>
             
             <div>
-                <h4>{price}</h4>
+                <h4>{`$${price}`}</h4>
                 <p>Medium</p>
             </div>
         </div>

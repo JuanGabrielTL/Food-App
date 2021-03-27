@@ -34,14 +34,14 @@ const useStyle=makeStyles({
     }
 })
 
-const CardReceipt = () => {
+const CardReceipt = ({total}) => {
 
     const classes=useStyle()
 
     return (
         <div className={classes.CardReceipt}>
             <h4>You have to pay</h4>
-            <h2>549.99 USD</h2>
+            <h2>{`${total} USD`}</h2>
             <hr />
 
             <div>

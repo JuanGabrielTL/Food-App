@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {makeStyles} from '@material-ui/styles';
 import {palette} from '../styles/palette'
 import {Link} from 'react-router-dom'
@@ -52,20 +52,43 @@ const Cart = () => {
 
     const classes=useStyle()
 
+    let itemTotal=0;
+    let deliveryCharge=1.25;
+    let tax=0;
+    let total=0;
+
+    const [pay, setPay] = useState([0,0,0,0])
+
+    useEffect(() => {
+        if(localStorage.getItem('cart')){
+            math()
+        }else{
+            setPay([0,0,0,0])
+        }
+    }, [])
+
     const GetCart =()=>{
         if(localStorage.getItem('cart')){
             let cart = JSON.parse(localStorage.getItem('cart'))
-
+            
             return (
                 <div className={classes.containerCart}>
-                {cart.map((item)=>{
-                    return <CardCart key={item.id} img={item.img} name={item.name} price={item.price} />
+                {cart.map((item,index)=>{
+                    itemTotal = itemTotal + item.price;
+                    return <CardCart key={index} img={item.img} name={item.name} price={item.price} />
                 })}
                 </div>
             )
         }else{
             return <EmptyCard />
         }
+        
+    }
+
+    const math=()=>{
+        tax=(itemTotal+deliveryCharge)*0.18;
+        total=itemTotal+deliveryCharge+tax;
+        setPay([itemTotal.toFixed(2),deliveryCharge.toFixed(2),tax.toFixed(2),total.toFixed(2)])
     }
 
     return (
@@ -82,25 +105,25 @@ const Cart = () => {
             <div>
                 <div className={classes.flexRow}>
                     <span>Item Total</span>
-                    <p>$65.25</p>
+                    <p>{`$${pay[0]}`}</p>
                 </div>
 
                 <div className={classes.flexRow}>
                     <span>Delivery Charge</span>
-                    <p>$1.25</p>
+                    <p>{`$${pay[1]}`}</p>
                 </div>
 
                 <div className={classes.flexRow}>
                     <span>Tax</span>
-                    <p>$0.50</p>
+                    <p>{`$${pay[2]}`}</p>
                 </div>
 
                 <div className={classes.flexRow}>
                     <span>Total</span>
-                    <p>$65.50</p>
+                    <p>{`$${pay[3]}`}</p>
                 </div>
 
-                <Link to='/cart/payment'>
+                <Link to={{pathname: '/cart/payment',state:{total:`${pay[3]}`}}}>
                 <button className={classes.btnCart}>Confirm Order</button>
                 </Link>
             </div>

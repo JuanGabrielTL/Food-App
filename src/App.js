@@ -19,7 +19,7 @@ function App() {
       <Route exact path='/location' component={Location}/>
       <Route exact path='/order/:id' component={Order}/>
       <Route exact path='/cart' component={Cart}/>
-      <Route exact path='/cart/payment' component={Payment}/>
+      <Route exact name='payment' path='/cart/payment' component={Payment}/>
     </Switch>
     </BrowserRouter>
   );

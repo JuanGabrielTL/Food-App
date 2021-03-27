@@ -47,7 +47,7 @@ const CardFood = ({calories,img,name,description,price}) => {
             <div>
                 <h5>{name}</h5>
                 <p>{description}</p>
-                <h4>{price}</h4>
+                <h4>{`$${price}`}</h4>
             </div>
         </div>
     )

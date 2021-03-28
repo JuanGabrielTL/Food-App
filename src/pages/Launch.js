@@ -2,6 +2,7 @@ import React from 'react'
 import {makeStyles} from '@material-ui/styles';
 import {palette} from '../styles/palette';
 import {Link} from 'react-router-dom';
+import {Redirect} from 'react-router-dom'
 import DeliverySvg from '../components/DeliverySvg';
 
 const useStyle=makeStyles({
@@ -50,6 +51,10 @@ const useStyle=makeStyles({
 const Launch = () => {
 
     const classes=useStyle()
+
+    if(localStorage.getItem('address')){
+        return <Redirect to="/home" />;
+    }
 
     return (
         <div className={classes.Launch}>

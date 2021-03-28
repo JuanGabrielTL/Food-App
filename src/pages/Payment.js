@@ -7,7 +7,7 @@ import cashIcon from '../img/cashIcon.png'
 import cardIcon from '../img/cardIcon.png'
 import paypalIcon from '../img/paypalIcon.png'
 import CardReceipt from '../components/CardReceipt';
-import {Link} from 'react-router-dom'
+import {Link, Redirect} from 'react-router-dom'
 import {useLocation} from "react-router-dom";
 
 const useStyle=makeStyles({
@@ -72,6 +72,10 @@ const Payment = () => {
     let data = useLocation();
 
     const [form, setForm] = useState( <FormCash /> )
+
+    if(!localStorage.getItem('cart')){
+        return <Redirect to="/cart" />;
+    }
 
     return (
         <div className={classes.Payment}>

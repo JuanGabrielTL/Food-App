@@ -45,6 +45,17 @@ const useStyle=makeStyles({
         height: '490px',
         overflow: 'hidden',
         overflowY: 'scroll',
+    },
+    btnCartDisabled:{
+        backgroundColor: palette.yellow,
+        outline: 'none',
+        border: 'none',
+        cursor: 'not-allowed',
+        borderRadius: '13px',
+        padding: '1rem 2rem',
+        fontWeight: 500,
+        marginTop: '2rem',
+        color: palette.black
     }
 })
 
@@ -81,6 +92,17 @@ const Cart = () => {
             )
         }else{
             return <EmptyCard />
+        }
+    }
+
+    const GetAddressDelivery=()=>{
+        if(localStorage.getItem('cart') && localStorage.getItem('address')){
+            return(
+            <Link to={{pathname: '/cart/payment',state:{total:`${pay[3]}`}}}>
+            <button className={classes.btnCart}>Confirm Order</button>
+            </Link>)
+        }else{
+            return(<button className={classes.btnCartDisabled} disabled >Confirm Order</button>)
         }
     }
 
@@ -122,9 +144,7 @@ const Cart = () => {
                     <p>{`$${pay[3]}`}</p>
                 </div>
 
-                <Link to={{pathname: '/cart/payment',state:{total:`${pay[3]}`}}}>
-                <button className={classes.btnCart}>Confirm Order</button>
-                </Link>
+                <GetAddressDelivery />
             </div>
         </div>
     )

@@ -61,6 +61,16 @@ const Home = () => {
 
     const [slice, setSlice] = useState([0,6])
 
+    const GetAddressDelivery=()=>{
+        if(localStorage.getItem('address')){
+            var address = JSON.parse(localStorage.getItem('address'))
+
+            return(<h4>{`${address.streetNumber} ${address.neighborhood}, #${address.houseNumber}. ${address.city}`}</h4>)
+        }else{
+            return(<h4>Please set your delivery address</h4>)
+        }
+    }
+
     return (
         <div className={classes.home}>
             <MenuBar />
@@ -85,7 +95,7 @@ const Home = () => {
                     <img src={addressIcon} alt='addressIcon' />
                     <div>
                         <p>Your Delivery Address</p>
-                        <h4>241 Hillside Road, HASTINGS</h4>
+                        <GetAddressDelivery />
                     </div>
                 </div>
             </div>

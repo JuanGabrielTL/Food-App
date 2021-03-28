@@ -25,7 +25,7 @@ const FormCash = () => {
         <form className={classes.FormCash}>
             <input type='name' placeholder='Name' required />
             <input type='tel' placeholder='Phone' required />
-            <input type='name' placeholder='Addres' required />
+            <input type='name' placeholder='Notes' />
         </form>
     )
 }

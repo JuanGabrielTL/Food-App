@@ -36,7 +36,7 @@ const FormCard = () => {
                 <input type='month' placeholder='Date' required />
                 <input type='tel' placeholder='CVV' required />
             </div>
-            <input type='name' placeholder='Addres' required />
+            <input type='name' placeholder='Notes' />
         </form>
     )
 }

@@ -20,7 +20,13 @@ const useStyle=makeStyles({
         justifyContent: 'center',
         alignItems: 'center',
         '& p':{
+            color: palette.gray,
             padding: '1rem 0'
+        },
+        '& h2':{
+            fontSize: '2.9rem',
+            color: palette.black,
+            fontWeight: 500
         }
     },
     btnAlert:{
@@ -35,7 +41,7 @@ const useStyle=makeStyles({
     }
 })
 
-const AlertModal = () => {
+const AlertModal = ({title,desc}) => {
 
     const classes=useStyle()
 
@@ -49,8 +55,8 @@ const AlertModal = () => {
 
     return (
         <div id='alert' className={classes.alert}>
-            <h2>Item Added To Cart</h2>
-            <p>Go to the cart to checkout</p>
+            <h2>{title}</h2>
+            <p>{desc}</p>
             <button className={classes.btnAlert} onClick={handleClose}>Continue</button>
         </div>
     )

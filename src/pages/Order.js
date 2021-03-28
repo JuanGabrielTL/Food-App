@@ -110,7 +110,7 @@ const Order = () => {
                 <input onClick={handleAddCart} type="image" src={shopIcon} alt='shop' className={classes.btnShop}/>
             </div>
 
-            <AlertModal />
+            <AlertModal title='Item Added To Cart' desc='Go to the cart to checkout' />
 
             <div id='overlay' className={classes.overlay}></div>
         </div>

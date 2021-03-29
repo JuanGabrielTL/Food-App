@@ -89,7 +89,7 @@ const Cart = () => {
                 <div className={classes.containerCart}>
                 {cart.map((item,index)=>{
                     itemTotal = itemTotal + item.price;
-                    return <CardCart key={index} img={item.img} name={item.name} price={item.price} />
+                    return <CardCart key={index} img={item.img} name={item.name} calories={item.calories} price={item.price} size={item.size} />
                 })}
                 </div>
             )

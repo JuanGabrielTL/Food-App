@@ -103,7 +103,7 @@ const DeliveryModal = () => {
 
             <div className={`${classes.deliveryInfo} ${classes.flexRow}`}>
                 <div className={classes.flexRowGrow}>
-                    <img className={classes.mgR} src={photo} alt='photo' />
+                    <img className={classes.mgR} src={photo} alt='photoMan' />
                     <div>
                         <span>Your delivery man</span>
                         <p>Benito Martínez</p>

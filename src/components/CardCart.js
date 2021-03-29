@@ -17,7 +17,7 @@ const useStyle=makeStyles({
     }
 })
 
-const CardCart = ({img,name,price}) => {
+const CardCart = ({img,name,calories,price,size}) => {
 
     const classes=useStyle()
 
@@ -27,12 +27,12 @@ const CardCart = ({img,name,price}) => {
 
             <div>
                 <h4>{name}</h4>
-                <p>Medium</p>
+                <p>{calories}</p>
             </div>
             
             <div>
                 <h4>{`$${price}`}</h4>
-                <p>Medium</p>
+                <p>{size}</p>
             </div>
         </div>
     )

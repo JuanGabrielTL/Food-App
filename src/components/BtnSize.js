@@ -1,6 +1,8 @@
 import React from 'react'
 import {makeStyles} from '@material-ui/styles';
 import {palette} from '../styles/palette'
+import {useParams} from 'react-router-dom'
+import foods from '../data/foods.json'
 
 const useStyle=makeStyles({
     BtnSize:{
@@ -18,6 +20,7 @@ const useStyle=makeStyles({
 const BtnSize = ({p,select='no'}) => {
 
     const classes=useStyle()
+    const {id}=useParams()
 
     const handleSize = (e)=>{
         const btns = document.querySelectorAll(`.${classes.BtnSize}`)
@@ -30,13 +33,16 @@ const BtnSize = ({p,select='no'}) => {
         e.target.classList.add('sizeOn')
 
         if(e.target.textContent==='S'){
-            imgOrder.style.transform= 'scale(1)';
+            imgOrder.style.animation= 'small 0.7s linear forwards';
+            foods[id-1].size='Small'
         }
         if(e.target.textContent==='M'){
-            imgOrder.style.transform= 'scale(1.1)';
+            imgOrder.style.animation= 'medium 0.7s linear forwards';
+            foods[id-1].size='Medium'
         }
         if(e.target.textContent==='L'){
-            imgOrder.style.transform= 'scale(1.2)';
+            imgOrder.style.animation= 'large 0.7s linear forwards';
+            foods[id-1].size='Large'
         }
     }
 

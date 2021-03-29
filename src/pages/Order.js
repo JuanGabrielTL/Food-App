@@ -41,7 +41,10 @@ const useStyle=makeStyles({
     imgOrder:{
         display: 'flex',
         justifyContent: 'center',
-        margin: '2.5rem 0'
+        padding: '2.5rem 0',
+        '& img':{
+            width: '30rem'
+        }
     },
     overlay:{
         position: 'fixed',

@@ -1,6 +1,7 @@
 import React from 'react'
 import {makeStyles} from '@material-ui/styles';
 import {palette} from '../styles/palette'
+import {Link} from 'react-router-dom'
 
 const useStyle=makeStyles({
     alert:{
@@ -21,12 +22,14 @@ const useStyle=makeStyles({
         alignItems: 'center',
         '& p':{
             color: palette.gray,
-            padding: '1rem 0'
+            padding: '1rem 0',
+            textAlign: 'center'
         },
         '& h2':{
             fontSize: '2.9rem',
             color: palette.black,
-            fontWeight: 500
+            fontWeight: 500,
+            textAlign: 'center'
         }
     },
     btnAlert:{
@@ -41,7 +44,7 @@ const useStyle=makeStyles({
     }
 })
 
-const AlertModal = ({title,desc}) => {
+const AlertModal = ({title,desc,path}) => {
 
     const classes=useStyle()
 
@@ -57,7 +60,10 @@ const AlertModal = ({title,desc}) => {
         <div id='alert' className={classes.alert}>
             <h2>{title}</h2>
             <p>{desc}</p>
+            
+            <Link to={path}>
             <button className={classes.btnAlert} onClick={handleClose}>Continue</button>
+            </Link>
         </div>
     )
 }

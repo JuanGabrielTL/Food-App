@@ -7,6 +7,7 @@ import Launch from './pages/Launch';
 import Location from './pages/Location';
 import Order from './pages/Order';
 import Payment from './pages/Payment';
+import Receipts from './pages/Receipts';
 import './styles/app.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route exact path='/order/:id' component={Order}/>
       <Route exact path='/cart' component={Cart}/>
       <Route exact name='payment' path='/cart/payment' component={Payment}/>
+      <Route exact path='/receipts' component={Receipts}/>
     </Switch>
     </BrowserRouter>
   );

@@ -11,7 +11,10 @@ const useStyle=makeStyles({
     Cart:{
         maxWidth: '1240px',
         margin: '0 auto',
-        padding: '2rem'
+        padding: '2rem',
+        '& h1':{
+            color: palette.black
+        }
     },
     flexRow:{
         display: 'flex',

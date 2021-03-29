@@ -128,7 +128,7 @@ const Location = () => {
 
                 <div className={classes.flexRow}>
 
-                    <Link to='/home' className={classes.btnCancel}>Cancel</Link>
+                    <Link to='/home' className={classes.btnCancel}>Back</Link>
                     <button className={classes.btnSet}>Set Location</button>
                 </div>
             </form>

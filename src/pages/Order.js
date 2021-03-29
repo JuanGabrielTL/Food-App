@@ -111,7 +111,6 @@ const Order = () => {
             </div>
 
             <AlertModal title='Item Added To Cart' desc='Go to the cart to checkout' />
-
             <div id='overlay' className={classes.overlay}></div>
         </div>
     )

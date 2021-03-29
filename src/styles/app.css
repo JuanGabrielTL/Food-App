@@ -151,3 +151,38 @@ a{
   }
 }
 
+#receipt.animate{
+  animation: receipt 1s linear;
+}
+@keyframes receipt{
+  from{
+    transform: translateY(300px);
+  }to{
+    transform: translateY(0);
+  }
+}
+
+#mouse.animate{
+  animation: mouse 1.5s linear;
+}
+@keyframes mouse{
+  from{
+    transform: translateX(300px);
+  }to{
+    transform: translateX(0);
+  }
+}
+
+#card.animate{
+  animation: card 2s linear;
+}
+@keyframes card{
+  from{
+    transform: translateX(-300px);
+  }to{
+    transform: translateX(0);
+  }
+}
+
+
+

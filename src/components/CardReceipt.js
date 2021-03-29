@@ -8,6 +8,7 @@ const useStyle=makeStyles({
         backgroundColor: palette.lapis,
         padding: '2rem 1.5rem',
         borderRadius: '13px',
+        margin: '2rem 0',
         '& h4':{
             color: palette.cyan,
             fontSize: '1.5rem',
@@ -44,6 +45,19 @@ const CardReceipt = ({total}) => {
 
     const classes=useStyle()
 
+    const handleQR=()=>{
+        const popupQR = document.getElementById('popupQR')
+        const overlay = document.getElementById('overlayQR')
+
+        popupQR.classList.add('modalActive')
+        overlay.classList.add('overlayActive')
+
+        document.getElementById('receipt').classList.add('animate')
+        document.getElementById('mouse').classList.add('animate')
+        document.getElementById('card').classList.add('animate')
+        
+    }
+
     return (
         <div className={classes.CardReceipt}>
             <div className={classes.flexRow}>
@@ -51,7 +65,9 @@ const CardReceipt = ({total}) => {
                     <h4>You have to pay</h4>
                     <h2>{`${total} USD`}</h2>
                 </div>
-                <QRCode value={`Total: ${total} / Order Number: 1266201`} size={52} bgColor={palette.lapis} fgColor={palette.cyan} />
+                <div onClick={handleQR}>
+                <QRCode value={`Total: ${total} / Order Number: 1266201`} size={42} bgColor={palette.lapis} fgColor={palette.cyan} />
+                </div>
             </div>
 
             <hr />

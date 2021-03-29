@@ -78,10 +78,10 @@ const MenuBar = () => {
                 <span>My Location</span>
             </Link>
 
-            <div onClick={handleClose} className={classes.li}>
+            <Link to='/receipts' onClick={handleClose} className={classes.li}>
                 <img src={receiptIcon} alt='receiptIcon' />
-                <span>Receipt</span>
-            </div>
+                <span>Receipts</span>
+            </Link>
 
             <div onClick={handleClose} className={classes.li}>
                 <img src={darkIcon} alt='darkIcon' />

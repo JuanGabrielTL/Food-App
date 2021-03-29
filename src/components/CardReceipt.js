@@ -38,6 +38,9 @@ const useStyle=makeStyles({
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center'
+    },
+    zoom:{
+        cursor: 'zoom-in'
     }
 })
 
@@ -55,7 +58,6 @@ const CardReceipt = ({total}) => {
         document.getElementById('receipt').classList.add('animate')
         document.getElementById('mouse').classList.add('animate')
         document.getElementById('card').classList.add('animate')
-        
     }
 
     return (
@@ -65,7 +67,7 @@ const CardReceipt = ({total}) => {
                     <h4>You have to pay</h4>
                     <h2>{`${total} USD`}</h2>
                 </div>
-                <div onClick={handleQR}>
+                <div className={classes.zoom} onClick={handleQR}>
                 <QRCode value={`Total: ${total} / Order Number: 1266201`} size={42} bgColor={palette.lapis} fgColor={palette.cyan} />
                 </div>
             </div>

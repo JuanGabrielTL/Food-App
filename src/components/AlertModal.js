@@ -44,7 +44,7 @@ const useStyle=makeStyles({
     }
 })
 
-const AlertModal = ({title,desc,path}) => {
+const AlertModal = ({title,desc}) => {
 
     const classes=useStyle()
 
@@ -61,9 +61,8 @@ const AlertModal = ({title,desc,path}) => {
             <h2>{title}</h2>
             <p>{desc}</p>
             
-            <Link to={path}>
+            
             <button className={classes.btnAlert} onClick={handleClose}>Continue</button>
-            </Link>
         </div>
     )
 }

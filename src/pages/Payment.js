@@ -9,8 +9,8 @@ import cashIcon from '../img/cashIcon.png'
 import cardIcon from '../img/cardIcon.png'
 import paypalIcon from '../img/paypalIcon.png'
 import CardReceipt from '../components/CardReceipt';
-import AlertModal from '../components/AlertModal';
 import PopupQR from '../components/PopupQR';
+import DeliveryModal from '../components/DeliveryModal';
 
 const useStyle=makeStyles({
     Payment:{
@@ -90,10 +90,10 @@ const Payment = () => {
     }
 
     const handleAlert = ()=>{
-        const alert = document.getElementById('alert')
+        const deliveryModal = document.getElementById('deliveryModal')
         const overlay = document.getElementById('overlay')
 
-        alert.classList.add('modalActive')
+        deliveryModal.classList.add('modalActive')
         overlay.classList.add('overlayActive')
     }
 
@@ -159,7 +159,7 @@ const Payment = () => {
                 <button onClick={handlePay} className={classes.btnPay}>Confirm Pay</button>
             </div>
 
-            <AlertModal title='Payment made' desc='The order is on its way' path='/home' />
+            <DeliveryModal />
             <div id='overlay' className={classes.overlay}></div>
 
             <PopupQR total={data.state.total} />

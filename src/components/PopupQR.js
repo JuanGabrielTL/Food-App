@@ -14,7 +14,7 @@ const useStyle=makeStyles({
         border: '1px solid black',
         zIndex: '2',
         backgroundColor: palette.white,
-        width: '50rem',
+        width: '40rem',
         maxWidth: '80%',
         padding: '2rem',
         display: 'flex',
